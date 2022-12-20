@@ -121,39 +121,44 @@ a:nth-of-type(13) {
 
 /*FRONTEND ANIMATION*/
 
+
 a:nth-of-type(1) {
   position: relative;
-  background: var(--highlight-secondary);
-  color: var(--secondary);
-  border-color: var(--secondary);
 }
 
 .flip {
-  animation-name: left;
+  animation-name: flip;
+  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
   animation-duration: 1.2s;
   animation-iteration-count: 1;
 }
 
 @keyframes flip {
   0% {
-     transform: perspective(400px) rotateY(0);
-     animation-timing-function: ease-out;
+    transform: scale(1, 1) translateY(0);
   }
-  40% {
-     transform: perspective(400px) translateZ(150px) rotateY(170deg);
-     animation-timing-function: ease-out;
+  10% {
+    transform: scale(1.1, 0.9) translateY(0);
+    background-color: #7ce7c9;
+  }
+  30% {
+    transform: scale(0.9, 1.1) translateY(-5rem) rotate(10deg);
+    background-color: #9d7beb;
   }
   50% {
-     transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
-     animation-timing-function: ease-in;
+    transform: scale(1.05, 0.95) translateY(0);
+    background-color: #fff;
   }
-  80% {
-     transform: perspective(400px) rotateY(360deg) scale(.95);
-     animation-timing-function: ease-in;
+  57% {
+    transform: scale(1, 1) translateY(-0.5rem) rotate(-2deg);
+    background-color: antiquewhite;
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+    background-color: aqua;
   }
   100% {
-     transform: perspective(400px) scale(1);
-     animation-timing-function: ease-in;
+    transform: scale(1, 1) translateY(0);
   }
-} 
- 
+}
+

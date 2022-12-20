@@ -26,12 +26,3 @@ function flipHandler() {
   frontend.classList.toggle('flip')
 }
 
-let design = document.querySelector('a:nth-of-type(1)')
-
-design.addEventListener('click', flipHandler)
-design.addEventListener('animationend', flipHandler)
-
-function flipHandler() {
-  design.classList.toggle('flip')
-}
-
