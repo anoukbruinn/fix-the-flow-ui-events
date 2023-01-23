@@ -40,6 +40,7 @@ a:hover {
 /* UI Event Classes */
 
 /* Jump animation on the interaction link */
+
 a:nth-of-type(12) {
   position: relative;
   background: var(--highlight-secondary);
@@ -80,7 +81,7 @@ a:nth-of-type(12) {
 
 /* MIJN ANIMATIES */
 
-/*userflow animation*/
+/*USERFLOW ANIMATION*/
 
 a:nth-of-type(13) {
   position: relative;
@@ -134,6 +135,89 @@ a:nth-of-type(1) {
 }
 
 @keyframes flip {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(1.1, 0.9) translateY(0);
+    background-color: #7ce7c9;
+  }
+  30% {
+    transform: scale(0.9, 1.1) translateY(-5rem) rotate(10deg);
+    background-color: #9d7beb;
+  }
+  50% {
+    transform: scale(1.05, 0.95) translateY(0);
+    background-color: #fff;
+  }
+  57% {
+    transform: scale(1, 1) translateY(-0.5rem) rotate(-2deg);
+    background-color: antiquewhite;
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+    background-color: aqua;
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+
+
+/*AND ANIMATION*/
+
+a:nth-of-type(13) {
+  position: relative;
+  background: var(--highlight-secondary);
+  color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.shake {
+  animation-name: shake;
+  animation-duration: 1.2s;
+  animation-iteration-count: 1;
+}
+
+@keyframes shake {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(-10,10) translateY(0) ;
+  }
+  30% {
+    transform: scale(1,1) translateY(-5rem) ;
+  }
+  50% {
+    transform: scale(10,-10) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(-0.5rem) ;
+  }
+  64% {
+    transform: scale(-10, 10) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+
+/*FRONTEND ANIMATION*/
+
+
+a:nth-of-type(3) {
+  position: relative;
+}
+
+.flip {
+  animation-name: hang;
+  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+  animation-duration: 1.2s;
+  animation-iteration-count: 1;
+}
+
+@keyframes hang {
   0% {
     transform: scale(1, 1) translateY(0);
   }
